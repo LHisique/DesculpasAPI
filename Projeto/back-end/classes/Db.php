@@ -2,7 +2,7 @@
 class Db {
     private $host, $porta, $usudb, $nomedb, $senhadb, $conexao, $tabela;
 
-    public function __construct($host="127.0.0.1", $porta="3306", $usudb="root", $nomedb="desculpas_db", $senhadb="") {
+    public function __construct($host="127.0.0.1", $porta="3306", $usudb="root", $nomedb="desculpasapi", $senhadb="") {
         $this->host = $host;
         $this->porta = $porta;
         $this->usudb = $usudb;
@@ -35,18 +35,31 @@ class Db {
     }
 
     public function executaSQL($query) {
+        if (!$this->conexao) {
+            return false;
+        }
+        $isSelect = preg_match('/^\s*(select|show|describe|explain)/i', $query);
         $dados = [];
         try {
             $this->conexao->beginTransaction();
             $resultado = $this->conexao->query(trim($query));
             $this->conexao->commit();
             if ($resultado) {
-                while($row = $resultado->fetch(PDO::FETCH_ASSOC)) $dados[] = $row;
+                if ($isSelect) {
+                    while($row = $resultado->fetch(PDO::FETCH_ASSOC)) $dados[] = $row;
+                    return $dados;
+                } else {
+                    return true;
+                }
+            } else {
+                return false;
             }
         } catch (PDOException $e) {
-            $this->conexao->rollBack();
+            if ($this->conexao->inTransaction()) {
+                $this->conexao->rollBack();
+            }
+            return false;
         }
-        return $dados;
     }
 
     public function gravar($dados = []) {

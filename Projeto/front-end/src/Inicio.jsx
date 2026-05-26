@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import './Inicio.css';
+import desesperadoImg from './desesperado.jpg';
 
 function Inicio() {
   const [desculpa, setDesculpa] = useState("Clique no botão para gerar uma desculpa!");
@@ -8,7 +9,6 @@ function Inicio() {
 
   const buscarDesculpa = async () => {
     setCarregando(true);
-    // Busca uma desculpa aleatória diretamente na api
     const resposta = await axios.get('http://localhost:8000/api/desculpas.php?random=true');
     if (resposta.data && resposta.data.frase) {
       setDesculpa(resposta.data.frase);
@@ -20,6 +20,7 @@ function Inicio() {
 
   return (
     <div className="inicio-wrapper">
+      <img src={desesperadoImg} alt="Pessoa desesperada" className="inicio-img" />
       <h1 className="inicio-title">Gerador de Desculpas</h1>
       <p className="inicio-desculpa-box">
         "{desculpa}"

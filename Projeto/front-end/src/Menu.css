@@ -29,7 +29,8 @@
 .menu-logo {
   color: white;
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
+  white-space: nowrap;
 }
 
 .menu-links-container {
@@ -52,8 +53,9 @@
 .menu-links {
   margin-left: 2.5rem;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 1rem;
+  white-space: nowrap;
 }
 
 .menu-link-active {
@@ -96,6 +98,7 @@
   color: #c7d2fe;
   font-size: 0.875rem;
   margin-right: 1rem;
+  white-space: nowrap;
 }
 
 .menu-logout-btn {
