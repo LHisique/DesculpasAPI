@@ -1,0 +1,129 @@
+.gerenciar-wrapper {
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin-top: 1.5rem;
+}
+
+.gerenciar-title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #4338ca;
+}
+
+.gerenciar-form {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.gerenciar-input {
+  flex-grow: 1;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  appearance: none;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  color: #374151;
+  line-height: 1.25;
+}
+
+.gerenciar-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.5);
+  border-color: #4338ca;
+}
+
+.gerenciar-btn-salvar {
+  background-color: #16a34a;
+  color: white;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+}
+
+.gerenciar-btn-salvar:hover {
+  background-color: #15803d;
+}
+
+.gerenciar-btn-cancelar {
+  background-color: #6b7280;
+  color: white;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+}
+
+.gerenciar-btn-cancelar:hover {
+  background-color: #4b5563;
+}
+
+.gerenciar-table-container {
+  overflow-x: auto;
+}
+
+.gerenciar-table {
+  min-width: 100%;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-collapse: collapse;
+}
+
+.gerenciar-table th, .gerenciar-table td {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.gerenciar-table th {
+  text-align: left;
+  background-color: #f9fafb;
+}
+
+.gerenciar-table th.center, .gerenciar-table td.center {
+  text-align: center;
+}
+
+.gerenciar-table tr:hover {
+  background-color: #f9fafb;
+}
+
+.gerenciar-table td.empty {
+  padding: 1rem;
+  text-align: center;
+  color: #6b7280;
+}
+
+.gerenciar-btn-editar {
+  color: #2563eb;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.gerenciar-btn-editar:hover {
+  color: #1e3a8a;
+  text-decoration: underline;
+}
+
+.gerenciar-btn-apagar {
+  color: #dc2626;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.gerenciar-btn-apagar:hover {
+  color: #7f1d1d;
+  text-decoration: underline;
+}

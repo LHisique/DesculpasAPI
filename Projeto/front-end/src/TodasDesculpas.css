@@ -1,0 +1,78 @@
+.todas-wrapper {
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin-top: 1.5rem;
+}
+
+.todas-title {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #4338ca;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+
+.todas-description {
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+.todas-loading {
+  text-align: center;
+  color: #6b7280;
+}
+
+.todas-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .todas-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.todas-card {
+  background-color: #eef2ff;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid #e0e7ff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s;
+}
+
+.todas-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.todas-card-id {
+  color: #4338ca;
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.todas-card-text {
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.todas-empty {
+  grid-column: span 1 / span 1;
+  text-align: center;
+  color: #6b7280;
+}
+
+@media (min-width: 768px) {
+  .todas-empty {
+    grid-column: span 2 / span 2;
+  }
+}

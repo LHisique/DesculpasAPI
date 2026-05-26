@@ -1,0 +1,88 @@
+.cadastro-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.cadastro-container {
+  width: 100%;
+  max-width: 28rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+}
+
+.cadastro-title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+}
+
+.cadastro-form-group {
+  margin-bottom: 1rem;
+}
+
+.cadastro-form-group-last {
+  margin-bottom: 1.5rem;
+}
+
+.cadastro-label {
+  display: block;
+  color: #374151;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.cadastro-input {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  appearance: none;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  color: #374151;
+  line-height: 1.25;
+}
+
+.cadastro-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.5);
+  border-color: #4338ca;
+}
+
+.cadastro-button {
+  width: 100%;
+  background-color: #4338ca;
+  color: white;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+}
+
+.cadastro-button:hover {
+  background-color: #3730a3;
+}
+
+.cadastro-footer {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.cadastro-link {
+  font-size: 0.875rem;
+  color: #4338ca;
+  text-decoration: none;
+}
+
+.cadastro-link:hover {
+  color: #3730a3;
+  text-decoration: underline;
+}
