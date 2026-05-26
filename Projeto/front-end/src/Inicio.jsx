@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import './Inicio.css';
 
@@ -8,19 +8,14 @@ function Inicio() {
 
   const buscarDesculpa = async () => {
     setCarregando(true);
-    try {
-      // Busca uma desculpa aleatória diretamente da nossa API PHP
-      const resposta = await axios.get('http://localhost:8000/api/desculpas.php?random=true');
-      if (resposta.data && resposta.data.frase) {
-        setDesculpa(resposta.data.frase);
-      } else {
-        setDesculpa("Erro: " + (resposta.data.erro || "Desconhecido"));
-      }
-    } catch (erro) {
-      setDesculpa("Erro ao conectar na API.");
-    } finally {
-      setCarregando(false);
+    // Busca uma desculpa aleatória diretamente na api
+    const resposta = await axios.get('http://localhost:8000/api/desculpas.php?random=true');
+    if (resposta.data && resposta.data.frase) {
+      setDesculpa(resposta.data.frase);
+    } else {
+      setDesculpa("Erro: " + (resposta.data.erro || "Desconhecido"));
     }
+    setCarregando(false);
   };
 
   return (

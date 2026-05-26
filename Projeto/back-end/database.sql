@@ -17,10 +17,6 @@ CREATE TABLE IF NOT EXISTS desculpas (
 INSERT INTO usuarios (login, senha, nome) VALUES 
 ('admin', 'e10adc3949ba59abbe56e057f20f883e', 'Administrador');
 
-CREATE TABLE IF NOT EXISTS desculpas (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    frase VARCHAR(255) NOT NULL
-);
 
 INSERT INTO desculpas (frase) VALUES 
 ('Hoje eu preciso lavar o cabelo.'),

@@ -17,7 +17,7 @@
   height: 4rem;
 }
 
-.menu-left-section {
+.menu-lado-esquerdo {
   display: flex;
   align-items: center;
 }
@@ -36,7 +36,7 @@
   display: none;
 }
 
-.menu-right-section {
+.menu-lado-direito {
   display: none;
 }
 
@@ -44,7 +44,7 @@
   .menu-links-container {
     display: block;
   }
-  .menu-right-section {
+  .menu-lado-direito {
     display: block;
   }
 }

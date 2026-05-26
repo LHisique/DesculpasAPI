@@ -1,0 +1,51 @@
+.sobre-projeto-caixa {
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin-top: 1.5rem;
+}
+
+.sobre-projeto-titulo {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #4338ca;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+
+.sobre-projeto-conteudo {
+  color: #374151;
+  line-height: 1.75rem;
+}
+
+.sobre-projeto-paragrafo {
+  margin-bottom: 1.5rem;
+}
+
+.sobre-projeto-subtitulo {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.sobre-projeto-lista {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sobre-projeto-lista li strong {
+  color: #1f2937;
+}

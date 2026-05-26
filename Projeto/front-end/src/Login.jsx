@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import './Login.css';
@@ -11,20 +11,16 @@ function Login({ aoLogar }) {
 
   const lidarComLogin = async (e) => {
     e.preventDefault();
-    try {
-      // Envia os dados de acesso para o servidor validar
-      const res = await axios.post('http://localhost:8000/api/login.php', {
-        login,
-        senha
-      });
+    // Envia os dados de acesso para o servidor validar
+    const res = await axios.post('http://localhost:8000/api/login.php', {
+      login,
+      senha
+    });
 
-      if (res.data && res.data.status === 'success') {
-        aoLogar({ nome: res.data.nome, login });
-      } else {
-        setErro(res.data.message || "Erro desconhecido");
-      }
-    } catch (err) {
-      setErro("Erro de conexão com o servidor");
+    if (res.data && res.data.status === 'success') {
+      aoLogar({ nome: res.data.nome, login });
+    } else {
+      setErro(res.data.message || "Erro desconhecido");
     }
   };
 

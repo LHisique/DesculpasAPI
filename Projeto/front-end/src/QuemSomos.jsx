@@ -1,33 +1,33 @@
-import React from 'react';
+
 import './QuemSomos.css';
+import luisImg from './luis.jpg';
 
 function QuemSomos() {
   return (
-    <div className="quem-somos-container">
-      <h2 className="quem-somos-title">Quem Somos</h2>
+    <div className="quem-sou-caixa">
+      <h2 className="quem-sou-titulo">Quem é esse cara lindo?!!</h2>
       
-      <div className="quem-somos-banner">
-        <p className="quem-somos-banner-text">
-          Olá! 👋 Construí este Gerador de Desculpas para o meu projeto final (avaliação B2). 
-          A ideia foi colocar a mão na massa e juntar tudo o que aprendemos: React no visual e PHP com Banco de Dados nos bastidores. Espero que você goste do resultado!
+      <div className="quem-sou-mensagem">
+        <p className="quem-sou-mensagem-texto">
+          Montei esse site em inspiração ao meu lado introvertido e um pouco anti social, vou usar isso toda vez que for necessário. 
         </p>
       </div>
 
-      <div className="quem-somos-author-section">
-        <h3 className="quem-somos-subtitle">Desenvolvido por:</h3>
+      <div className="quem-sou-bloco-autor">
+        <h3 className="quem-sou-subtitulo">Desenvolvido por: Luís Isique</h3>
         
-        <div className="quem-somos-author-card">
-          <div className="quem-somos-avatar">
-            A
+        <div className="quem-sou-cartao">
+          <div className="quem-sou-foto">
+            <img src={luisImg} alt="Luís Isique" />
           </div>
           <div>
-            <p className="quem-somos-author-name">[SEU NOME AQUI]</p>
-            <p className="quem-somos-author-ra">RA: [SEU RA AQUI]</p>
+            <p className="quem-sou-nome">Luís Isique</p>
+            <p className="quem-sou-ra">RA: 221483</p>
           </div>
         </div>
         
-        <p className="quem-somos-note">
-          * Não esqueça de trocar seu nome e RA ali em cima no código antes de entregar, hein! 😉
+        <p className="quem-sou-lembrete">
+          
         </p>
       </div>
     </div>

@@ -1,4 +1,4 @@
-.quem-somos-container {
+.quem-sou-caixa {
   max-width: 42rem;
   margin-left: auto;
   margin-right: auto;
@@ -9,7 +9,7 @@
   margin-top: 2.5rem;
 }
 
-.quem-somos-title {
+.quem-sou-titulo {
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 700;
@@ -18,7 +18,7 @@
   text-align: center;
 }
 
-.quem-somos-banner {
+.quem-sou-mensagem {
   background-color: #eef2ff;
   border-left-width: 4px;
   border-color: #4338ca;
@@ -26,17 +26,17 @@
   margin-bottom: 1.5rem;
 }
 
-.quem-somos-banner-text {
+.quem-sou-mensagem-texto {
   color: #374151;
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
 
-.quem-somos-author-section {
+.quem-sou-bloco-autor {
   margin-top: 2rem;
 }
 
-.quem-somos-subtitle {
+.quem-sou-subtitulo {
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 600;
@@ -46,7 +46,7 @@
   padding-bottom: 0.5rem;
 }
 
-.quem-somos-author-card {
+.quem-sou-cartao {
   background-color: #f9fafb;
   padding: 1rem;
   border-radius: 0.375rem;
@@ -57,7 +57,7 @@
   margin-bottom: 1rem;
 }
 
-.quem-somos-avatar {
+.quem-sou-foto {
   height: 3rem;
   width: 3rem;
   border-radius: 9999px;
@@ -70,20 +70,27 @@
   font-size: 1.25rem;
   line-height: 1.75rem;
   margin-right: 1rem;
+  overflow: hidden;
 }
 
-.quem-somos-author-name {
+.quem-sou-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quem-sou-nome {
   font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.75rem;
   color: #1f2937;
 }
 
-.quem-somos-author-ra {
+.quem-sou-ra {
   color: #4b5563;
 }
 
-.quem-somos-note {
+.quem-sou-lembrete {
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #ef4444;

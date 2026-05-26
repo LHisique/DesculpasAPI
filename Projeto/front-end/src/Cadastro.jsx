@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import './Cadastro.css';
@@ -11,9 +11,13 @@ function Cadastro() {
 
   const lidarComCadastro = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:8000/api/cadastro.php', { nome, login, senha }).then(() => {
-      alert("Cadastro realizado!");
-      navegar('/login');
+    axios.post('http://localhost:8000/api/cadastro.php', { nome, login, senha }).then((res) => {
+      if (res.data && res.data.erro) {
+        alert(res.data.erro);
+      } else {
+        alert("Cadastro realizado!");
+        navegar('/login');
+      }
     });
   };
 

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Link, useLocation } from 'react-router-dom';
 import './Menu.css';
 
@@ -13,7 +13,7 @@ function Menu({ onLogout, userName }) {
     <nav className="menu-navbar">
       <div className="menu-container">
         <div className="menu-wrapper">
-          <div className="menu-left-section">
+          <div className="menu-lado-esquerdo">
             <div className="menu-logo-container">
               <span className="menu-logo">DesculpasApp</span>
             </div>
@@ -27,7 +27,7 @@ function Menu({ onLogout, userName }) {
               </div>
             </div>
           </div>
-          <div className="menu-right-section">
+          <div className="menu-lado-direito">
             <div className="menu-user-info">
               <span className="menu-greeting">Olá, {userName}! 👋</span>
               <button onClick={onLogout} className="menu-logout-btn">

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './TodasDesculpas.css';
 
@@ -8,14 +8,9 @@ function TodasDesculpas() {
 
   useEffect(() => {
     const buscarTodasDesculpas = async () => {
-      try {
-        const resposta = await axios.get('http://localhost:8000/api/desculpas.php');
-        setDesculpas(Array.isArray(resposta.data) ? resposta.data : []);
-      } catch (erro) {
-        console.error("Erro ao carregar desculpas");
-      } finally {
-        setCarregando(false);
-      }
+      const resposta = await axios.get('http://localhost:8000/api/desculpas.php');
+      setDesculpas(Array.isArray(resposta.data) ? resposta.data : []);
+      setCarregando(false);
     };
     buscarTodasDesculpas();
   }, []);

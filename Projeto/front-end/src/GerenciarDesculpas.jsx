@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './GerenciarDesculpas.css';
 
@@ -6,17 +6,14 @@ function GerenciarDesculpas() {
   const [desculpas, setDesculpas] = useState([]);
   const [novaFrase, setNovaFrase] = useState('');
   const [editando, setEditando] = useState(null);
-
+// usando a biblioteca axios ele pega as operações para adicionar, remover e editar as desculpas
   const API_URL = 'http://localhost:8000/api/desculpas.php';
 
   const carregarDesculpas = async () => {
-    try {
-      // Carrega a lista completa de desculpas do banco de dados
-      const res = await axios.get(API_URL);
-      setDesculpas(Array.isArray(res.data) ? res.data : []);
-    } catch (err) {
-      console.error(err);
-    }
+    // função async para carregar as desculpas 
+    // Carrega a lista completa de desculpas do banco de dados
+    const res = await axios.get(API_URL);
+    setDesculpas(Array.isArray(res.data) ? res.data : []);
   };
 
   useEffect(() => {
@@ -25,19 +22,15 @@ function GerenciarDesculpas() {
 
   const salvar = async (e) => {
     e.preventDefault();
-    try {
-      // Verifica se o usuário está editando uma desculpa (PUT) ou criando uma nova (POST)
-      if (editando) {
-        await axios.put(API_URL, { id: editando.id, frase: novaFrase });
-      } else {
-        await axios.post(API_URL, { frase: novaFrase });
-      }
-      setNovaFrase('');
-      setEditando(null);
-      carregarDesculpas();
-    } catch (err) {
-      alert("Erro ao salvar.");
+    // Verifica se o usuário está editando uma desculpa (PUT) ou criando uma nova (POST)
+    if (editando) {
+      await axios.put(API_URL, { id: editando.id, frase: novaFrase });
+    } else {
+      await axios.post(API_URL, { frase: novaFrase });
     }
+    setNovaFrase('');
+    setEditando(null);
+    carregarDesculpas();
   };
 
   const editar = (desculpa) => {
@@ -53,12 +46,8 @@ function GerenciarDesculpas() {
   const apagar = async (id) => {
     // Pede confirmação antes de deletar o registro para evitar acidentes
     if (window.confirm("Deseja realmente apagar esta desculpa?")) {
-      try {
-        await axios.delete(`${API_URL}?id=${id}`);
-        carregarDesculpas();
-      } catch (err) {
-        alert("Erro ao apagar.");
-      }
+      await axios.delete(`${API_URL}?id=${id}`);
+      carregarDesculpas();
     }
   };
 
